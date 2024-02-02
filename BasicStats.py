@@ -7,11 +7,16 @@ def find_average(numbers):
     else:
         return "List is empty, cannot calculate average."
  
+def find_max(numbers):
+    if numbers:
+        return max(numbers)
+    else:
+        return "List is empty."
  
- 
-def display_results(sum_result, average_result):
+def display_results(sum_result, average_result, max_result):
     print(f"Sum of the numbers: {sum_result}")
     print(f"Average of the numbers: {average_result}")
+    print(f"Maximum number in the list: {max_result}")
  
 def main():
     # Get user input for a list of numbers
@@ -21,9 +26,10 @@ def main():
     # Perform list operations
     sum_result = find_sum(user_numbers)
     average_result = find_average(user_numbers)
+    max_result = find_max(user_numbers)
  
     # Display the results
-    display_results(sum_result, average_result)
+    display_results(sum_result, average_result, max_result)
  
 if __name__ == "__main__":
     main()
